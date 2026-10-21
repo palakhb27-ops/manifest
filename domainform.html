@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="description" content="Manifest - AI business advisor, expert Q&A forum and market research for entrepreneurs.">
+    <title>Business Information - Manifest</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #8edaef, #f0f3f4); 
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .radio-group {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .checkbox-group {
+            margin-bottom: 10px;
+        }
+        .scale-group {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+  }
+
+  .scale-group label {
+    margin-right: 10px; /* Add some space between label and radio button */
+  }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Business Information</h2>
+        <form id="domain-form">
+
+            <label for="business-name">NAME:</label>
+            <input type="text" id="business-name" name="Name" placeholder="Enter Name of Business" required>
+
+            <label for="domain">Domain of Business:</label>
+            <select id="domain" name="domain" required>
+                <option value="">Select a domain</option>
+                <option value="technology">Technology</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="retail">Retail</option>
+                <option value="finance">Finance</option>
+                <option value="education">Education</option>
+                <option value="food">Food &amp; Beverage</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="other">Other</option>
+            </select>
+
+            <div class="scale-group">
+                <label>Business Scale:</label>
+                <input type="radio" id="small" name="scale" value="small" checked>  
+                <label for="small">Small Scale</label>
+                <input type="radio" id="large" name="scale" value="large">  
+                <label for="large">Large Scale</label>
+            </div><br>
+
+            <label for="funds">Funds (Range):</label>
+            <input type="number" id="funds" name="funds" min="0" step="1000" placeholder="Enter amount (USD)" required>
+
+            <label for="targetAudience">Target Audience:</label>
+            <textarea id="targetAudience" name="targetAudience" required></textarea>
+
+            <label for="email">Business Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="challenges">Challenges Faced:</label>
+            <textarea id="challenges" name="challenges"></textarea>
+
+            <div class="scale-group">
+                <label>Type of Market:</label><br>
+                <input type="radio" id="b2b" name="marketType" value="b2b" required>
+                <label for="b2b">B2B (Business-to-Business)</label>
+                <input type="radio" id="b2c" name="marketType" value="b2c">
+                <label for="b2c">B2C (Business-to-Consumer)</label>
+            </div>
+
+            <label for="setbacks">Setbacks (if any):</label>
+            <textarea id="setbacks" name="setbacks"></textarea>
+
+            <div class="scale-group">
+                <input type="checkbox" id="legalAuthentication" name="legalAuthentication" required>
+                <label for="legalAuthentication">Legal Authentication (I confirm that all information provided is accurate and truthful)</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+<script>
+  // Save answers in this browser tab only (no password involved) so the AI Advisor can pre-fill them.
+  document.getElementById("domain-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = new FormData(this);
+    var data = {
+      name: f.get("Name"), domain: f.get("domain"), funds: f.get("funds"),
+      audience: f.get("targetAudience"), challenges: f.get("challenges") || f.get("setbacks") || ""
+    };
+    try { sessionStorage.setItem("manifestBusiness", JSON.stringify(data)); } catch (err) {}
+    window.location.href = "AI.html";
+  });
+</script>
+</body>
+</html>

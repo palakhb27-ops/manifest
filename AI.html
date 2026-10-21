@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="description" content="Manifest - AI business advisor, expert Q&A forum and market research for entrepreneurs.">
+    <title>AI Business Advisor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+            padding-bottom: 70px;
+        }
+
+        header {
+            background-color: #0044cc; /* Dark Blue header */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 40px;
+            text-align: center;
+            transform: perspective(1000px) rotateX(5deg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: perspective(1000px) rotateX(0deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-box h2 {
+            color: #0044cc;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-box p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            transform: perspective(1000px) rotateX(5deg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-container:hover {
+            transform: perspective(1000px) rotateX(0deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h2 {
+            color: #0044cc;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .form-container label {
+            font-size: 1rem;
+            margin: 10px 0 5px;
+            color: #555;
+            display: block;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .form-container input:focus,
+        .form-container select:focus,
+        .form-container textarea:focus {
+            border-color: #0044cc;
+            outline: none;
+            transform: translateY(-2px);
+        }
+
+        .form-container button {
+            background-color: #0044cc;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: #0033a1;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background-color: #0044cc;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .topnav { background: #003399; text-align: center; padding: 8px; }
+        .topnav a { color: #fff; margin: 0 12px; text-decoration: none; font-weight: bold; }
+        .topnav a:hover { text-decoration: underline; }
+        @media (max-width: 700px) { header { font-size: 1.4rem; } .feature-box, .form-container { transform: none; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AI Business Advisor</h1>
+</header>
+
+<nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="AI.html">AI Advisor</a>
+    <a href="qa.html">Q&amp;A Forum</a>
+    <a href="chatbot.html">Chatbot</a>
+    <a href="contact.html">Query</a>
+</nav>
+
+<section>
+    <div class="feature-box">
+        <h2>Welcome to Your AI Business Advisor</h2>
+        <p>Get personalized, data-driven advice to help grow your business. Answer a few questions, and our AI will guide you on your business journey.</p>
+    </div>
+
+    <div class="form-container">
+        <h2>Provide Your Business Details</h2>
+        <form id="advisor-form">
+            <label for="business-name">Business Name</label>
+            <input type="text" id="business-name" name="business-name" required placeholder="Enter your business name">
+
+            <label for="industry">Industry</label>
+            <input type="text" id="industry" name="industry" required placeholder="Enter your business industry">
+
+            <label for="goals">Business Goals</label>
+            <textarea id="goals" name="goals" rows="4" placeholder="Describe your business goals (e.g., growth, marketing optimization, etc.)" required></textarea>
+
+            <label for="challenges">Business Challenges</label>
+            <textarea id="challenges" name="challenges" rows="4" placeholder="What challenges is your business facing?" required></textarea>
+
+            <label for="budget">Monthly Budget (in USD)</label>
+            <input type="number" id="budget" name="budget" required placeholder="Enter your monthly budget" min="0" step="any">
+
+            <button type="submit">Get AI Recommendations</button>
+        </form>
+    </div>
+
+    <div class="feature-box" id="advice" style="display:none;transform:none;margin-top:40px;text-align:left"></div>
+
+</section>
+
+<footer>
+    <p>&copy; <span id="yr">2026</span> AI Business Advisor. All Rights Reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+  // Pre-fill from the business information form, if the user just filled it in.
+  try {
+    var saved = JSON.parse(sessionStorage.getItem("manifestBusiness") || "null");
+    if (saved) {
+      var set = function (id, val) { var el = document.getElementById(id); if (el && val && !el.value) el.value = val; };
+      set("business-name", saved.name);
+      set("industry", saved.domain);
+      set("goals", saved.audience ? "Reach: " + saved.audience : "");
+      set("challenges", saved.challenges);
+      set("budget", saved.funds);
+    }
+  } catch (err) {}
+  // Demo advisor (rule-based, runs in the browser). Replace with a call to your backend /api/advisor for real AI answers.
+  document.getElementById("advisor-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = function (id) { return document.getElementById(id).value.trim(); };
+    var budget = Number(v("budget"));
+    if (!isFinite(budget) || budget < 0) { alert("Please enter a valid budget."); return; }
+    var stage = budget < 500 ? "Idea / validation stage" : budget < 5000 ? "Early traction stage" : "Growth stage";
+    var tips = [
+      "Validate demand in " + v("industry") + " with 10 customer interviews before spending more.",
+      "Write down 3 measurable goals from: " + v("goals") + ".",
+      "Address your main challenge first: " + v("challenges") + ".",
+      budget < 500 ? "Use free channels first (social media, communities, referrals)." : "Split your monthly budget: 50% acquisition, 30% product, 20% reserve."
+    ];
+    var box = document.getElementById("advice");
+    box.innerHTML = "";
+    var h = document.createElement("h2");
+    h.textContent = "Recommendations for " + v("business-name");
+    var p = document.createElement("p");
+    p.textContent = "Likely stage: " + stage;
+    var ul = document.createElement("ul");
+    tips.forEach(function (t) { var li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+    box.appendChild(h); box.appendChild(p); box.appendChild(ul);
+    box.style.display = "block";
+    box.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
+</body>
+</html>

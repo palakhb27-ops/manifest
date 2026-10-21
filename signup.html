@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="description" content="Manifest - AI business advisor, expert Q&A forum and market research for entrepreneurs.">
+    <title>Sign Up - Manifest</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #f0f3f4,#8edaef); 
+            margin: 0; 
+            padding: 0; 
+            height: 100vh; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333; 
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555; 
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 12px); 
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4285f4; 
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #357ae8; 
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .signup-link a {
+            color: #4285f4;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="first_name" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="last_name" required autocomplete="family-name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password">
+            </div>
+            <div class="form-group">
+                <label for="confirm">Confirm Password</label>
+                <input type="password" id="confirm" name="confirm" required minlength="8" autocomplete="new-password">
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="signup-link">Already have an account? <a href="registration.html">Login</a></div>
+    </div>
+<script>
+  // Demo: no account is created yet. The password is never put in the URL.
+  document.getElementById("signup-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (document.getElementById("password").value !== document.getElementById("confirm").value) {
+      alert("Passwords do not match.");
+      return;
+    }
+    try { sessionStorage.setItem("manifestUser", document.getElementById("firstname").value.trim()); } catch (err) {}
+    window.location.href = "domainform.html";
+  });
+</script>
+</body>
+</html>

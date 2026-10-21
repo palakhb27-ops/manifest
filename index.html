@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="description" content="Manifest - AI business advisor, expert Q&A forum and market research for entrepreneurs.">
+    <title>Manifest - Business Advisor &amp; Expert Q&amp;A Forum</title>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #cee5ed;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #4285f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #7ca6ea;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        .section {
+            padding: 60px 0;
+            background-color: #fff;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 250px;
+            padding: 15px;
+            background-color: #7ca6ea;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            margin: 0 auto;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #f1c40f;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        .ai-advisor {
+            background: #eaf4ff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .qa-forum {
+            background: #e9f7ef;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about {
+            background: #fffbe6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .animated-text {
+            font-size: 2em;
+            color: rgb(83, 118, 146);
+            transition: color 1s ease, transform 0.5s ease;
+            text-align: center;
+        }
+
+        .animated-text:hover {
+            color: red;
+            transform: scale(1.2);
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Image Styling */
+        .section img {
+            float:right;
+            max-width: 200px; /* Adjust image size as needed */
+            height: auto;
+            margin-left: auto; /* Push image to the right */
+            margin-right: 0; /* Make sure right margin is zero */
+        }
+
+        .text-content {
+            width: 100%;
+            overflow: hidden;
+        }
+        .text-content ul { margin: 10px 0 10px 24px; font-size: 1.1em; }
+        .section img { border-radius: 10px; }
+
+        @media (max-width: 700px) {
+            .container { width: 92%; }
+            header h1 { font-size: 1.8em; }
+            nav li, header nav ul li { display: block; margin: 8px 0; }
+            .section img { float: none; display: block; margin: 15px auto; }
+            .ai-advisor, .qa-forum, .about { flex-direction: column; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="font-size: 4.4em;">MANIFEST</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registration.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="AI.html">AI Advisor</a></li>
+            <li><a href="qa.html">Q&A Forum</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="contact.html">Query</a></li>
+        </ul>
+    </nav>
+    <p class="animated-text fade-in">MANIFEST YOUR GROWTH WITH US</p>
+    <h1 style="text-align:center;">Key Features</h1>
+    <!-- AI Business Advisor Section -->
+    <section id="ai-advisor" class="section ai-advisor">
+        <div class="container">
+            <div class="text-content">
+                <h2>AI Business Advisor</h2>
+                <img src="images/ai-advisor.svg" alt="AI Business Advisor">
+                <ul>
+                    <li>Personalized guidance</li>
+                    <li>Stage identification</li>
+                    <li>Goal tracking</li>
+                    <li>Dynamic roadmap</li>
+                    <li>Contextual advice</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Q&A Forum Section -->
+    <section id="qa-forum" class="section qa-forum">
+        <div class="container">
+            <div class="text-content">
+                <h2>Expert Q&A Forum</h2>
+                <img src="images/qa-forum.svg" alt="Expert Q&A Forum">
+                <ul>
+                    <li>Users can post doubts</li>
+                    <li>Industry experts</li>
+                    <li>Experienced entrepreneurs can respond</li>
+                    <li>Mentors</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="text-content">
+                <h2>Market Research</h2>
+                <img src="images/market-research.svg" alt="Market Research">
+                <ul>
+                    <li>Market sizing</li>
+                    <li>Competitive analysis</li>
+                    <li>Customer segmentation</li>
+                    <li>Revenue benchmarking</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="yr">2026</span> MANIFEST</p>
+    </footer>
+
+    <script>
+        // Initialize Scroll Reveal
+        if (window.ScrollReveal) { ScrollReveal().reveal('.section', { delay: 200, distance: '50px', duration: 1000 }); }
+        document.getElementById('yr').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

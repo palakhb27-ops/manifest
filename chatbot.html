@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="description" content="Manifest - AI business advisor, expert Q&A forum and market research for entrepreneurs.">
+    <title>Chatbot - Manifest</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  
+  .chat-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  #user-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  button:disabled {
+    background-color: #9bcf9d;
+    cursor: wait;
+  }
+
+  #user-input { box-sizing: border-box; width: 100%; margin-bottom: 10px; }
+  .chat-box p { text-align: left; margin: 0 0 8px; }
+</style>  
+</head>
+<body>
+  <div class="chat-container">
+    <p style="margin:0 0 10px"><a href="index.html">&larr; Home</a></p>
+    <div id="chat-box" class="chat-box" aria-live="polite">
+      <!-- Messages will appear here -->
+    </div>
+    <input type="text" id="user-input" placeholder="Ask me something..." aria-label="Your message" autocomplete="off">
+    <button id="send-btn">Send</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
